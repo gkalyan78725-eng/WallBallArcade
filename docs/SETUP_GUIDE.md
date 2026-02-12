@@ -41,8 +41,8 @@ Complete setup instructions for the Wall Ball AR Arcade system.
 - Unity Hub (recommended)
 
 **CUDA (for GPU acceleration):**
-- NVIDIA CUDA Toolkit 11.7+
-- cuDNN 8.5+
+- NVIDIA CUDA Toolkit 12.1+
+- cuDNN 8.9+
 
 ---
 
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 **Package Installation Order (if issues):**
 1. Install PyTorch with CUDA first:
    ```bash
-   pip install torch==2.0.1 torchvision==0.15.2 --index-url https://download.pytorch.org/whl/cu117
+   pip install torch==2.6.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu121
    ```
 
 2. Install other dependencies:
@@ -394,7 +394,7 @@ sudo ufw allow 9000/udp
 3. Reinstall PyTorch with CUDA:
    ```bash
    pip uninstall torch torchvision
-   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu117
+   pip install torch==2.6.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu121
    ```
 4. Verify with: `nvidia-smi`
 

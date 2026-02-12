@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Unity](https://img.shields.io/badge/Unity-2020.3+-green.svg)](https://unity.com)
-[![CUDA](https://img.shields.io/badge/CUDA-11.7+-orange.svg)](https://developer.nvidia.com/cuda-toolkit)
+[![CUDA](https://img.shields.io/badge/CUDA-12.1+-orange.svg)](https://developer.nvidia.com/cuda-toolkit)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -67,8 +67,10 @@ Physical Ball → Camera → Vision Engine → Network → Unity Client → Proj
 **Software:**
 - Python 3.8-3.10
 - Unity 2020.3 LTS+
-- CUDA Toolkit 11.7+
+- CUDA Toolkit 12.1+
 - Git
+
+> **⚠️ Security Note:** This project uses PyTorch 2.6.0 to address known security vulnerabilities in earlier versions (CVE-2024-XXXXX). Do not downgrade to versions < 2.6.0.
 
 ### Installation
 
