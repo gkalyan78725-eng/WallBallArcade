@@ -1,0 +1,47 @@
+camera:
+  index: 0
+  width: 1280
+  height: 720
+  fps: 60
+  buffer_size: 1
+  backend: "DSHOW"
+
+detection:
+  model: "yolov8n.pt"
+  confidence_threshold: 0.45
+  iou_threshold: 0.4
+  imgsz: 640
+  device: "cuda"
+  half_precision: true
+  max_det: 5
+
+tracking:
+  kalman_process_noise: 0.01
+  kalman_measurement_noise: 0.1
+  max_disappear_frames: 10
+  min_hit_confidence: 0.6
+
+hit_detection:
+  velocity_threshold: -50
+  direction_change_angle: 120
+  hit_confirmation_frames: 3
+  min_distance_to_wall: 20
+  debounce_time: 0.3
+
+performance:
+  target_fps: 60
+  frame_skip_threshold: 0.8
+  warmup_frames: 30
+
+network:
+  protocol: "udp"
+  udp_host: "127.0.0.1"
+  udp_port: 9000
+  websocket_uri: "ws://localhost:9001"
+
+debug:
+  show_visualization: true
+  show_fps: true
+  show_trajectory: true
+  show_bounding_box: true
+  save_debug_video: false
